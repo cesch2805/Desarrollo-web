@@ -1,0 +1,12 @@
+2022/05/08-01:56:43.993 5288 Creating DB D:\learnyounode\whatsapp-bot\.wwebjs_auth\session-client-one\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2022/05/08-01:56:44.126 5288 Reusing MANIFEST D:\learnyounode\whatsapp-bot\.wwebjs_auth\session-client-one\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/05/08-01:57:28.171 5320 Level-0 table #5: started
+2022/05/08-01:57:28.245 5320 Level-0 table #5: 1160984 bytes OK
+2022/05/08-01:57:28.294 5320 Delete type=0 #3
+2022/05/08-01:57:34.125 40d0 Level-0 table #7: started
+2022/05/08-01:57:34.332 40d0 Level-0 table #7: 1142070 bytes OK
+2022/05/08-01:57:34.399 40d0 Delete type=0 #4
+2022/05/08-01:57:34.440 1e70 Compacting 1@1 + 1@2 files
+2022/05/08-01:57:34.578 1e70 Generated table #8@1: 18064 keys, 1337098 bytes
+2022/05/08-01:57:34.578 1e70 Compacted 1@1 + 1@2 files => 1337098 bytes
+2022/05/08-01:57:34.627 1e70 compacted to: files[ 0 0 1 0 0 0 0 ]
