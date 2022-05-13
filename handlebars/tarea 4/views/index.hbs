@@ -1,8 +1,8 @@
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h4 class="text-info">Birthdays</h4>
+    <h4 class="text-dark">Cumpleaños</h4>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Add people
     </button>
 </div>
@@ -33,8 +33,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn btn-outline-dark">Save</button>
                 </div>
             </form>
         </div>
@@ -46,17 +46,17 @@
         <div class="col-md-3">
             <div class="card mb-3">
                 <div class="card-body" >
-                    <div class="modal fade" id="edit{{this._id}}" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <form action="/update" method="POST" class=" mb-4"> <div class="modal-header"> <h5 class="modal-title" id="edit{{this._id}}Label">Edit Friend</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div> <div class="modal-body"> <div class="mb-2"> <div class="form-group"><input type="text" name="_id" class="form-control" value="{{this._id}}" readonly style="display: none;"> </div> <div class="form-group"> <label for="name">Name</label> <input type="text" name="name" class="form-control"> </div> <div class="form-group"> <label for="phone">Phone</label> <input type="text" name="phone" class="form-control"> </div> <div class="form-group"> <label for="birthday">Birthday</label> <input type="date" name="birthday" class="form-control"> </div> </div> </div> <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> <button type="submit" class="btn btn-primary">Save</button> </div> </form> </div> </div> </div>
-                    <div class="modal fade" id="congratulate{{this._id}}" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <form action="/congratulate" method="POST" class=" mb-4"> <div class="modal-header"> <h5 class="modal-title" id="congratulate{{this._id}}Label">Congratulate friend</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div> <div class="modal-body"> <div class="mb-2"> <div class="form-group"><input type="text" name="_id" class="form-control" value="{{this._id}}" readonly style="display: none;"> </div> <div class="form-group"> <label for="msg">Birthday message</label> <input type="text" name="msg" class="form-control"> </div> </div> </div> <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> <button type="submit" class="btn btn-primary">Save</button> </div> </form> </div> </div> </div>
+                    <div class="modal fade" id="edit{{this._id}}" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <form action="/update" method="POST" class=" mb-4"> <div class="modal-header"> <h5 class="modal-title" id="edit{{this._id}}Label">Edit Friend</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div> <div class="modal-body"> <div class="mb-2"> <div class="form-group"><input type="text" name="_id" class="form-control" value="{{this._id}}" readonly style="display: none;"> </div> <div class="form-group"> <label for="name">Name</label> <input type="text" name="name" class="form-control"> </div> <div class="form-group"> <label for="phone">Phone</label> <input type="text" name="phone" class="form-control"> </div> <div class="form-group"> <label for="birthday">Birthday</label> <input type="date" name="birthday" class="form-control"> </div> </div> </div> <div class="modal-footer"> <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button> <button type="submit" class="btn btn-outline-dark">Save</button> </div> </form> </div> </div> </div>
+                    <div class="modal fade" id="congratulate{{this._id}}" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true"> <div class"="modal-dialog"> <div class="modal-content"> <form action="/congratulate" method="POST" class=" mb-4"> <div class="modal-header"> <h5 class="modal-title" id="congratulate{{this._id}}Label">Congratulate friend</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div> <div class="modal-body"> <div class="mb-2"> <div class="form-group"><input type="text" name="_id" class="form-control" value="{{this._id}}" readonly style="display: none;"> </div> <div class="form-group"> <label for="msg">Birthday message</label> <input type="text" name="msg" class="form-control"> </div> </div> </div> <div class="modal-footer"> <button type="button" class=btn btn-outline-dark" data-bs-dismiss="modal">Close</button> <button type="submit" class="btn btn-primary">Save</button> </div> </form> </div> </div> </div>
                     <p>Name: {{this.name}}</p>
                     <p>Phone: {{this.phone}}</p>
                     <p>Birthday: {{this.birthday}}</p>
                     <div class="d-flex justify-content-between">
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#congratulate{{this._id}}">Congratulate</button>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#edit{{this._id}}">Edit</button>
+                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#congratulate{{this._id}}">Congratulate</button>
+                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#edit{{this._id}}">Edit</button>
                         <form action="/delete" method="POST" id="delete{{this._id}}">
                             <input type="text" name="_id" value="{{this._id}}" readonly style="display: none;">
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="submit" class="btn-outline-dark">Delete</button>
                         </form>
                     </div>
                 </div>
