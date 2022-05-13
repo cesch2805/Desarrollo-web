@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // API route
-app.use('/api/students', require('./routes/api/students'));
+/* app.use('/api/students', require('./routes/api/students')); */
 // API route
 app.use('/api/persons', require('./routes/api/persons'));
 

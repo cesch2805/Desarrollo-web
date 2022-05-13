@@ -3,7 +3,7 @@ let count = 0;
 
 const connectDB = () => {
     console.log('Connecting to MongoDB');
-    mongoose.connect('mongodb://localhost:27017/api-students').then(() =>{
+    mongoose.connect('mongodb://localhost:27017/whatsapp').then(() =>{
         console.log('MongoDB is connected')
     }).catch((err) => {
         console.log('MongoDB connection unsuccessful, retry after 5 seconds. ', ++count);

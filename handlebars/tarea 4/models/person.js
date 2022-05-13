@@ -7,6 +7,6 @@ const personSchema = new Schema({
     birthday: Date
 },  { collection: 'persons' })
 
-const Person = mongoose.model('Persons', personSchema);
+const Person = mongoose.model('Whatsapps', personSchema);
 
 module.exports = Person;
