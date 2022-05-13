@@ -4,7 +4,12 @@ const express = require('express');
 const router = express.Router();
 const uuid = require('uuid');
 const students = require('../../Students');
-
+let lId = 0
+students.forEach(student => {
+    if(student.id > lId){
+        lId = student.id
+    }
+});
 
 const filename = 'studen.json';
 
@@ -27,7 +32,7 @@ router.get('/:id', (req, res) => {
 // Create new student
 router.post('/', (req, res) => {
     const newStudent = {
-        id: uuid.v4(),
+        id: ++lId,
         name: req.body.name,
         email: req.body.email,
         status: 'active'
@@ -57,9 +62,15 @@ router.put('/:id', (req, res) => {
                 student.name = updStudent.name ? updStudent.name : student.name;
                 student.email = updStudent.email ? updStudent.email : student.email;
 
+                let arr = JSON.stringify(students);
+                fs.writeFile(filename, arr, err =>{
+                    if(err)throw err;
+                    console.log("Data");
+                });
                 res.json({ msg: 'Student updated', student });
             }
         });
+
     } else {
         res.status(400).json({ msg: `No student with the id ${req.params.id}`});
     }
@@ -73,8 +84,15 @@ router.delete('/:id', (req, res) => {
         
         res.json( { msg: 'Student deleted', student: students.filter(student => student.id !== parseInt(req.params.id)) });
         students.forEach(student => {
-             
-
+            if(student.id === parseInt(req.params.id)){
+                pos = students.indexOf(student);
+            }
+        });
+        students.splice(pos,1);
+        let arr = JSON.stringify(students);
+        fs.writeFile(filename, arr, err =>{
+            if(err)throw err;
+            console.log("Student deleted");
         });
 
     } else {
